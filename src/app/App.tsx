@@ -1,3 +1,4 @@
+import { ErrorBoundary } from './components/ErrorBoundary';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollProgress from './components/ScrollProgress';
 import Navigation from './components/Navigation';
@@ -31,8 +32,10 @@ export default function App() {
         {/* Navigation */}
         <Navigation />
 
-        {/* Three.js Ambient Background */}
-        <AmbientBackground />
+        {/* Three.js Ambient Background — αν αποτύχει το WebGL, το υπόλοιπο site φορτώνει κανονικά */}
+        <ErrorBoundary fallback={null}>
+          <AmbientBackground />
+        </ErrorBoundary>
 
         {/* Main Content */}
         <main className="relative z-10">

@@ -11,6 +11,7 @@ import Timeline from './components/Timeline';
 import SafeSpace from './components/SafeSpace';
 import ChildrensWorld from './components/ChildrensWorld';
 import Testimonials from './components/Testimonials';
+import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -51,6 +52,9 @@ export default function App() {
           <SafeSpace />
           <ChildrensWorld />
           <Testimonials />
+          <section id="gallery">
+            <Gallery />
+          </section>
           <section id="contact">
             <Contact />
           </section>

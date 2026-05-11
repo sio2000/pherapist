@@ -28,6 +28,7 @@ export default function Navigation() {
     { label: 'Σχετικά', href: '#about' },
     { label: 'Υπηρεσίες', href: '#services' },
     { label: 'Προσέγγιση', href: '#approach' },
+    { label: 'Gallery', href: '#gallery' },
     { label: 'Επικοινωνία', href: '#contact' },
   ];
 

@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import sxesisImg from '../../assets/sxesis.png';
 
 export default function Hero() {
   return (
@@ -82,11 +84,12 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-[var(--lavender)] via-[var(--dusty-rose)] to-[var(--peach-glow)] opacity-20">
-            {/* Placeholder for portrait - replace with actual image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-[var(--cream)] to-[var(--sand)]" />
-            </div>
+          <div className="relative flex items-center justify-center rounded-3xl shadow-2xl ring-1 ring-[var(--border)] bg-gradient-to-br from-[var(--lavender)]/30 via-[var(--dusty-rose)]/20 to-[var(--peach-glow)]/30 p-4 sm:p-6 md:p-8">
+            <ImageWithFallback
+              src={sxesisImg}
+              alt="Συστημική ψυχοθεραπεία και σχέσεις"
+              className="w-full h-auto max-h-[min(72vh,680px)] object-contain object-center rounded-2xl"
+            />
           </div>
 
           {/* Floating accent elements */}

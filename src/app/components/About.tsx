@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import bioImg from '../../assets/bio.png';
 
 export default function About() {
   return (
@@ -15,10 +17,12 @@ export default function About() {
           >
             <div className="relative">
               {/* Portrait placeholder */}
-              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-[var(--sand)] to-[var(--taupe)]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full bg-gradient-to-br from-[var(--lavender)]/20 via-[var(--dusty-rose)]/20 to-[var(--peach-glow)]/20" />
-                </div>
+              <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-[var(--border)] bg-[var(--sand)]">
+                <ImageWithFallback
+                  src={bioImg}
+                  alt="Παόλα Ισμαήλη — ψυχολόγος"
+                  className="absolute inset-0 size-full object-cover"
+                />
               </div>
 
               {/* Floating quote */}
